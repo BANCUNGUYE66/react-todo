@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import { v4 as uuidv4 } from "uuid";
 import InputTodo from '@/components/InputTodo';
 import TodosList from '@/components/TodosList';
 
 const TodosLogic = () => {
   const [todos, setTodos] = useState([
     {
-      id: 1,
+      id: uuidv4(),
       title: 'Setup development environment',
       completed: true,
     },
@@ -43,9 +44,18 @@ const TodosLogic = () => {
     ]);
   };
 
+  const addTodoItem = (title) => {
+    const newTodo = {
+      id: uuidv4(),
+      title: title,
+      completed: false,
+    };
+    setTodos([...todos, newTodo]);
+  };
+
   return (
     <div>
-      <InputTodo />
+      <InputTodo addTodoItem={addTodoItem} />
       <TodosList
         todosProps={todos}
         handleChange={handleChange}
