@@ -1,6 +1,6 @@
 /* eslint-disable */
-import Header from '@/components/Header';
-import TodosLogic from '@/components/TodosLogic';
+import Header from './header';
+import TodosLogic from './TodosLogic';
 
 const TodoApp = () => (
   <div className="wrapper">

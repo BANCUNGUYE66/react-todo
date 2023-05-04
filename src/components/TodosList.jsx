@@ -1,5 +1,5 @@
 /* eslint-disable */
-import TodoItem from '@/components/TodoItem';
+import TodoItem from './TodoItem';
 
 const TodosList = ({
   todosProps, handleChange, delTodo, setUpdate,

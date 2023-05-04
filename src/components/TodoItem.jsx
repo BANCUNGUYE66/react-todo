@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { useState } from 'react';
-import styles from '@/styles/TodoItem.module.css';
+import styles from '../styles/TodoItem.module.css';
 
 const TodoItem = ({
   itemProp, handleChange, delTodo, setUpdate,
