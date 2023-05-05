@@ -1,10 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+/* eslint-disable */
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import TodoApp from './components/TodoApp';
+import './styles/app.css';
+
+const domContainer = document.getElementById('root');
+const root = ReactDOM.createRoot(domContainer);
+root.render(
   <React.StrictMode>
-    <App />
+    <TodoApp />
   </React.StrictMode>,
-)
+);
